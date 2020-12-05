@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">	
+    <title>GPA CALC</title>
+    <link rel="stylesheet" href="Project.css">
+    <script src="library_event.js"></script>
+    <script src="Project.js"></script>
+</head>
+<header>
+    <a href="Project.html"><img src="images/AUM-Logo.png" alt="AUM logo" width="100" height="100"/></a>
+    <h1 class="orangeC">GPA Calculation</h1>
+    
+    <!--Date and Clock Starts here -->
+    <div id="clockbox" style="color: orangered; font-weight: bold; text-align: right";></div>
+
+    <script type="text/javascript">
+    var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    function GetClock(){
+    var d=new Date();
+    var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+    var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+    if(nhour==0){ap=" AM";nhour=12;}
+    else if(nhour<12){ap=" AM";}
+    else if(nhour==12){ap=" PM";}
+    else if(nhour>12){ap=" PM";nhour-=12;}
+
+    if(nmin<=9) nmin="0"+nmin;
+    if(nsec<=9) nsec="0"+nsec;
+
+    var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+    document.getElementById('clockbox').innerHTML=clocktext;
+    }
+
+    GetClock();
+    setInterval(GetClock,1000);
+</script>
+<!--Date and Clock ends-->
+    
+    
+<!--Navbar start-->
+    <nav id="nav_top">
+        <ul>
+            <li><a href="Project.html">Home</a></li>
+            <li><a href="Computer%20Science%20Description.html">Computer Science Program</a></li>
+            <li><a href="Teaching%20Assistant.html">Teaching Assistant Application</a></li>
+            <li><a href="GPA.html">GPA Calculate</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+<!--Navbar ends-->
+</header>
+<body>
+    <main>
+    <br>
+    <br><h3>Here on this page you can calcluate your current average GPA.</h3>
+    <br><h3>Press the calculate button and enter the grade and  credit hours for at least 2 classes </h3>
+
+<!--GPA Calculation function  start -->
+    <script>
+        function add() {
+            var gradePoints1 = 0;
+            var gradePoints2 = 0;
+            var gradePoints3 = 0;
+            var gradePoints4 = 0;
+            var gradePoints5 = 0;
+            var gradePoints6 = 0;
+            var gradePoints7 = 0;
+      
+            //Asks for user input
+            //Asks for number of class. Must pick at 2 and no more than seven
+            
+            var moreCourse = prompt("How many Classes do you have (min: 2 / max:7)", 0);
+            var courseNum = parseFloat(moreCourse);
+            
+            
+            
+            //Checks for number of classess and runs based on number
+            if (moreCourse == "7")
+                {
+                    var credits1 = prompt("Enter credit hours for class 1", 0);
+                    var credit10 = parseFloat(credits1);
+                    var letterGrade1 = prompt("Enter grade for class 1", "");
+
+                    var credits2 = prompt("Enter credit hours for class 2", 0);
+                    var credit20 = parseFloat(credits2);
+                    var letterGrade2 = prompt("Enter grade for class 2", "");
+
+                    var credits3 = prompt("Enter credit hours for class 3", 0);
+                    var credit30 = parseFloat(credits3);
+                    var letterGrade3 = prompt("Enter grade for class 3", "");
+
+                    var credits4 = prompt("Enter credit hours for class 4", 0);
+                    var credit40 = parseFloat(credits4);
+                    var letterGrade4 = prompt("Enter grade for class 4", "");
+
+                    var credits5 = prompt("Enter credit hours for class 5", 0);
+                    var credit50 = parseFloat(credits5);
+                    var letterGrade5 = prompt("Enter grade for class 5", "");
+
+                    var credits6 = prompt("Enter credit hours for class 6", 0);
+                    var credit60 = parseFloat(credits6);
+                    var letterGrade6 = prompt("Enter grade for class 6", "");
+
+                    var credits7 = prompt("Enter credit hours for class 7", 0);
+                    var credit70 = parseFloat(credits7);
+                    var letterGrade7 = prompt("Enter grade for class 7", "");
+                
+            
+                }
+           else if (moreCourse == "6")
+               {
+                   var credits1 = prompt("Enter credit hours for class 1", 0);
+                    var credit10 = parseFloat(credits1);
+                    var letterGrade1 = prompt("Enter grade for class 1", "");
+
+                    var credits2 = prompt("Enter credit hours for class 2", 0);
+                    var credit20 = parseFloat(credits2);
+                    var letterGrade2 = prompt("Enter grade for class 2", "");
+
+                    var credits3 = prompt("Enter credit hours for class 3", 0);
+                    var credit30 = parseFloat(credits3);
+                    var letterGrade3 = prompt("Enter grade for class 3", "");
+
+                    var credits4 = prompt("Enter credit hours for class 4", 0);
+                    var credit40 = parseFloat(credits4);
+                    var letterGrade4 = prompt("Enter grade for class 4", "");
+
+                    var credits5 = prompt("Enter credit hours for class 5", 0);
+                    var credit50 = parseFloat(credits5);
+                    var letterGrade5 = prompt("Enter grade for class 5", "");
+
+                    var credits6 = prompt("Enter credit hours for class 6", 0);
+                    var credit60 = parseFloat(credits6);
+                    var letterGrade6 = prompt("Enter grade for class 6", "");
+                   
+                   
+                   credits7 = "";
+                   credit70 = 0;
+                   letterGrade7 = "";
+                   
+               }
+            else if (moreCourse == "5")
+               {
+                   
+                   var credits1 = prompt("Enter credit hours for class 1", 0);
+                    var credit10 = parseFloat(credits1);
+                    var letterGrade1 = prompt("Enter grade for class 1", "");
+
+                    var credits2 = prompt("Enter credit hours for class 2", 0);
+                    var credit20 = parseFloat(credits2);
+                    var letterGrade2 = prompt("Enter grade for class 2", "");
+
+                    var credits3 = prompt("Enter credit hours for class 3", 0);
+                    var credit30 = parseFloat(credits3);
+                    var letterGrade3 = prompt("Enter grade for class 3", "");
+
+                    var credits4 = prompt("Enter credit hours for class 4", 0);
+                    var credit40 = parseFloat(credits4);
+                    var letterGrade4 = prompt("Enter grade for class 4", "");
+
+                    var credits5 = prompt("Enter credit hours for class 5", 0);
+                    var credit50 = parseFloat(credits5);
+                    var letterGrade5 = prompt("Enter grade for class 5", "");
+                   
+                   credits6 = "";
+                   credit60 = 0;
+                   letterGrade6 = "";
+                   
+                   credits7 = "";
+                   credit70 = 0;
+                   letterGrade7 = "";
+                   
+               }
+            else if (moreCourse == "4")
+               {
+                   var credits1 = prompt("Enter credit hours for class 1", 0);
+                    var credit10 = parseFloat(credits1);
+                    var letterGrade1 = prompt("Enter grade for class 1", "");
+
+                    var credits2 = prompt("Enter credit hours for class 2", 0);
+                    var credit20 = parseFloat(credits2);
+                    var letterGrade2 = prompt("Enter grade for class 2", "");
+
+                    var credits3 = prompt("Enter credit hours for class 3", 0);
+                    var credit30 = parseFloat(credits3);
+                    var letterGrade3 = prompt("Enter grade for class 3", "");
+
+                    var credits4 = prompt("Enter credit hours for class 4", 0);
+                    var credit40 = parseFloat(credits4);
+                    var letterGrade4 = prompt("Enter grade for class 4", "");
+                   
+                   
+                   credits5 = "";
+                   credit50 = 0;
+                   letterGrade5 = "";
+                   
+                   credits6 = "";
+                   credit60 = 0;
+                   letterGrade6 = "";
+                   
+                   credits7 = "";
+                   credit70 = 0;
+                   letterGrade7 = "";
+                   
+               }
+            else if (moreCourse == "3")
+               {
+                   var credits1 = prompt("Enter credit hours for class 1", 0);
+                    var credit10 = parseFloat(credits1);
+                    var letterGrade1 = prompt("Enter grade for class 1", "");
+
+                    var credits2 = prompt("Enter credit hours for class 2", 0);
+                    var credit20 = parseFloat(credits2);
+                    var letterGrade2 = prompt("Enter grade for class 2", "");
+
+                    var credits3 = prompt("Enter credit hours for class 3", 0);
+                    var credit30 = parseFloat(credits3);
+                    var letterGrade3 = prompt("Enter grade for class 3", "");
+
+                   
+                   credits4 = "";
+                   credit40 = 0;
+                   letterGrade4 = "";
+                   
+                   credits5 = "";
+                   credit50 = 0;
+                   letterGrade5 = "";
+                   
+                   credits6 = "";
+                   credit60 = 0;
+                   letterGrade6 = "";
+                   
+                   credits7 = "";
+                   credit70 = 0;
+                   letterGrade7 = "";
+                   
+               }
+            else if (moreCourse == "2")
+               {
+                   var credits1 = prompt("Enter credit hours for class 1", 0);
+                    var credit10 = parseFloat(credits1);
+                    var letterGrade1 = prompt("Enter grade for class 1", "");
+
+                    var credits2 = prompt("Enter credit hours for class 2", 0);
+                    var credit20 = parseFloat(credits2);
+                    var letterGrade2 = prompt("Enter grade for class 2", "");
+                   
+                   
+                   credits3 = "";
+                   credit30 = 0;
+                   letterGrade3 = "";
+                   
+                   credits4 = "";
+                   credit40 = 0;
+                   letterGrade4 = "";
+                   
+                   credits5 = "";
+                   credit50 = 0;
+                   letterGrade5 = "";
+                   
+                   credits6 = "";
+                   credit60 = 0;
+                   letterGrade6 = "";
+                   
+                   credits7 = "";
+                   credit70 = 0;
+                   letterGrade7 = "";
+                   
+               }
+            else {
+                   credits1 = "";
+                   credit10 = 0;
+                   letterGrade1 = "";
+                
+                   credits2 = "";
+                   credit20 = 0;
+                   letterGrade2 = "";
+                
+                   credits3 = "";
+                   credit30 = 0;
+                   letterGrade3 = "";
+                
+                   credits4 = "";
+                   credit40 = 0;
+                   letterGrade4 = "";
+                
+                   credits5 = "";
+                   credit50 = 0;
+                   letterGrade5 = "";
+                
+                   credits6 = "";
+                   credit60 = 0;
+                   letterGrade6 = "";
+                
+                   credits7 = "";
+                   credit70 = 0;
+                   letterGrade7 = "";
+            }
+            
+            //Converts Letter grades into numbers
+            
+            if (letterGrade1 == "A" || letterGrade1 == "a")
+                {
+                    gradePoints1 = 4.0;
+                }
+            else if (letterGrade1 == "B" || letterGrade1 == "b")
+                {
+                    gradePoints1 = 3.0;
+                }
+            else if (letterGrade1 == "C" || letterGrade1 == "c")
+                {
+                    gradePoints1 = 2.0;
+                }
+            else if (letterGrade1 == "D" || letterGrade1 == "d")
+                {
+                    gradePoints1 = 1.0;
+                }
+            else {
+                gradePoints1 = 0;
+            }
+            
+            
+            if (letterGrade2 == "A" || letterGrade2 == "a")
+                {
+                    gradePoints2 = 4.0;
+                }
+            else if (letterGrade2 == "B" || letterGrade2 == "b")
+                {
+                    gradePoints2 = 3.0;
+                }
+            else if (letterGrade2 == "C" || letterGrade2 == "c")
+                {
+                    gradePoints2 = 2.0;
+                }
+            else if (letterGrade2 == "D" || letterGrade2 == "d")
+                {
+                    gradePoints2 = 1.0;
+                }
+            else {
+                gradePoints2 = 0;
+            }
+            
+            
+            if (letterGrade3 == "A" || letterGrade3 == "a")
+                {
+                    gradePoints3 = 4.0;
+                }
+            else if (letterGrade3 == "B" || letterGrade3 == "b")
+                {
+                    gradePoints3 = 3.0;
+                }
+            else if (letterGrade3 == "C" || letterGrade3 == "c")
+                {
+                    gradePoints3 = 2.0;
+                }
+            else if (letterGrade3 == "D" || letterGrade3 == "d")
+                {
+                    gradePoints3 = 1.0;
+                }
+            else {
+                gradePoints3 = 0;
+            }
+            
+            
+            if (letterGrade4 == "A" || letterGrade4 == "a")
+                {
+                    gradePoints4 = 4.0;
+                }
+            else if (letterGrade4 == "B" || letterGrade4 == "b")
+                {
+                    gradePoints4 = 3.0;
+                }
+            else if (letterGrade4 == "C" || letterGrade4 == "c")
+                {
+                    gradePoints4 = 2.0;
+                }
+            else if (letterGrade4 == "D" || letterGrade4 == "d")
+                {
+                    gradePoints4 = 1.0;
+                }
+            else {
+                gradePoints4 = 0;
+            }
+            
+            
+            if (letterGrade5 == "A" || letterGrade5 == "a")
+                {
+                    gradePoints5 = 4.0;
+                }
+            else if (letterGrade5 == "B" || letterGrade5 == "b")
+                {
+                    gradePoints5 = 3.0;
+                }
+            else if (letterGrade5 == "C" || letterGrade5 == "c")
+                {
+                    gradePoints5 = 2.0;
+                }
+            else if (letterGrade5 == "D" || letterGrade5 == "d")
+                {
+                    gradePoints5 = 1.0;
+                }
+            else {
+                gradePoints5 = 0;
+            }
+            
+            
+            if (letterGrade6 == "A" || letterGrade6 == "a")
+                {
+                    gradePoints6 = 4.0;
+                }
+            else if (letterGrade6 == "B" || letterGrade6 == "b")
+                {
+                    gradePoints6 = 3.0;
+                }
+            else if (letterGrade6 == "C" || letterGrade6 == "c")
+                {
+                    gradePoints6 = 2.0;
+                }
+            else if (letterGrade6 == "D" || letterGrade6 == "d")
+                {
+                    gradePoints6 = 1.0;
+                }
+            else {
+                gradePoints6 = 0;
+            }
+            
+            if (letterGrade7 == "A" || letterGrade7 == "a")
+                {
+                    gradePoints7 = 4.0;
+                }
+            else if (letterGrade7 == "B" || letterGrade7 == "b")
+                {
+                    gradePoints7 = 3.0;
+                }
+            else if (letterGrade7 == "C" || letterGrade7 == "c")
+                {
+                    gradePoints7 = 2.0;
+                }
+            else if (letterGrade7 == "D" || letterGrade7 == "d")
+                {
+                    gradePoints7 = 1.0;
+                }
+            else {
+                gradePoints7 = 0;
+            }
+            
+            
+            
+            
+            
+            var numGrade = gradePoints1 + gradePoints2 + gradePoints3 + gradePoints4 + gradePoints5 + gradePoints6 + gradePoints7;
+            
+            var totCredit = credit10 + credit20 + credit30 + credit40 + credit50 + credit60 +credit70;
+            
+            
+            
+            var total =   (numGrade * totCredit) / (totCredit * courseNum);
+            
+            
+            
+            document.getElementById("gpap15").innerHTML = "Average GPA is " + total + " .";
+        }
+    </script>
+  <!--GPA Calculation function  end -->
+        
+    <p id="gpap15"></p>
+        
+ 
+    <label>&nbsp;</label>
+	<button onclick="add()">Calculate</button>
+
+	
+	
+    <div id="results"></div>
+    <div id="scores"></div>
+    <table id="scores_table"></table>
+</main>
+    <footer class="bold">
+    &#169; Derius Knight 2020 <br>
+    Email: Dknigh14@aum.edu
+</footer>
+</body>

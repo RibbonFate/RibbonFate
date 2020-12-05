@@ -1,0 +1,108 @@
+#nav_top ul { list-style-type: none; }
+#nav_top ul li { float: left; }
+#nav_top ul li a {
+    text-align: center;
+    display: block;
+    width: 300px;
+    padding: 1em 0;
+    text-decoration: none;
+    background-image: -webkit-linear-gradient(30deg, orangered 0%, orange 25%, orangered 99%);
+    color: black;
+    font-weight: bold;
+    border-right: 2px solid white;}
+#nav_top ul li a.lastitem { border-right: none; }
+#nav_top ul li a.current { color: darkblue; }
+
+footer {
+	font-size: 85%;
+	text-align: left;
+	border: black solid 3px;
+	border-width: 3px 0px 0px 0px;
+	padding: .75em;
+	background-image: -webkit-linear-gradient(30deg, orangered 0%, orange 25%, orangered 99%);
+	
+    clear: both;
+	}
+header {
+     
+    background-image: -webkit-linear-gradient(30deg, black 0%, white 25%, black 99%);
+}
+
+table {
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+}
+
+
+
+td {
+    border-style: solid;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.border {
+    border-style: solid;
+}
+
+.center2 {
+    text-align: center;
+}
+
+html {
+    background-image: url(images/Housing-Residence.jpg);
+    background-repeat: no-repeat;
+    background-size: 2000px 2000px;
+    
+}
+
+.shadow {
+    text-shadow: 2px 2px orange;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.boldO {
+    font-weight: bold;
+    color: orangered;
+}
+
+.boldIO {
+    font-weight: bold;
+    font-style: italic;
+    color: orangered;
+
+}
+
+
+.boldI {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.orange {
+    color: orangered;
+    font-weight: bold;
+    text-align: right;
+}
+
+.orangeC {
+    color: orangered;
+    font-weight: bold;
+    text-align: center;
+}
+
+img {
+    float: left;
+}
+
+.orangeT {
+    background-color: orangered;
+    font-weight: bold;
+}

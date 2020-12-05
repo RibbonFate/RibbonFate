@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">	
+    <title>Teaching Asistant</title>
+    <link rel="stylesheet" href="Project.css">
+    <script src="library_event.js"></script>
+  
+    <style>
+    	
+		}
+		h1 {
+			color: blue; 
+			font-size: 140%;
+		}
+		h2 {
+			font-size: 115%;
+			padding: .5em 0;
+		}
+		label {
+			color: black;
+			float: left;
+			width: 8em;
+			font-weight: bold;
+			text-align: left;
+		}
+		input {
+			width: 15em;
+			margin: 0 0 .5em 1em;
+		}
+		#button, #reset {
+			width: 7em;
+			background-color: silver;
+			box-shadow: 2px 2px 0 blue; }
+		#button {
+			margin-left: 9em;
+		}
+        
+        .css{
+            width: 1em;
+        }
+	</style>
+</head>
+<header>
+    <a href="Project.html"><img src="images/AUM-Logo.png" alt="AUM logo" width="100" height="100"/></a>
+    <h1 class="orangeC">Teaching Assistant Application</h1>
+    
+    
+    <!--Date and Clock Starts here -->
+    <div id="clockbox" style="color: orangered; font-weight: bold; text-align: right";></div>
+
+    <script type="text/javascript">
+    var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    function GetClock(){
+    var d=new Date();
+    var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+    var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+    if(nhour==0){ap=" AM";nhour=12;}
+    else if(nhour<12){ap=" AM";}
+    else if(nhour==12){ap=" PM";}
+    else if(nhour>12){ap=" PM";nhour-=12;}
+
+    if(nmin<=9) nmin="0"+nmin;
+    if(nsec<=9) nsec="0"+nsec;
+
+    var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+    document.getElementById('clockbox').innerHTML=clocktext;
+    }
+
+    GetClock();
+    setInterval(GetClock,1000);
+</script>
+<!--Date and Clock ends-->
+    
+    
+<!--Navbar start-->
+    <nav id="nav_top">
+        <ul>
+            <li><a href="Project.html">Home</a></li>
+            <li><a href="Computer%20Science%20Description.html">Computer Science Program</a></li>
+            <li><a href="Teaching%20Assistant.html">Teaching Assistant Application</a></li>
+            <li><a href="GPA.html">GPA Calculate</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+<!--Navbar ends-->
+</header>
+    
+<body>
+    
+    <!--Survey Start-->
+    <h1>Please complete the survey to apply for the position</h1>
+<form name="myform" action="survey_data.html" method="get">
+	
+	<h2>Student Information</h2>
+	<label for="email">Student Email:</label>
+    <input type="email" name="Email" id="email"><br>
+    
+    <label for="firstname">First name:</label>
+    <input type="text" name="First name" id="firstname"><br>
+    
+    <label for="lastname">Last name:</label>
+    <input type="text" name="Last name" id="lastname"><br>
+    
+    <label for="stuNUM">Student Number:</label>
+    <input type="text" name="Student Number" id="stuNUM"><br>
+    
+    <label for="gender">Gender:</label>
+    <input type="text" name="Gender" id="gender"><br>
+    
+    <label for="GPA">GPA:</label>
+    <input type="text" name="GPA" id="GPA"><br>
+    
+    <label for="date">Submission Date:</label>
+    <input type="text" name="Submission Date" id="date"><br>
+    
+    <h2> Geographic Information</h2>
+    <label for="state">State:</label> 
+    <input type="text" name="state" id="state" required placeholder="Two characters"
+           pattern="[A-Za-z]{2}" title="Must be 2 characters"><br>
+    <label for="zipcode">Zip Code:</label>
+    <input type="text" name="zipcode" id="zipcode" required placeholder="Five digits"
+           pattern="\d{5}" title="Must be 99999"><br>
+    
+    <h2> How did you hear about us?</h2>
+    <label for="websearch"> Web Search:</label>
+    <input class="css" type="checkbox" name="websearch" id="websearch"> <br>
+    <label for="facebook"> Facebook:</label>
+    <input class="css" type="checkbox" name="facebook" id="facebook"> <br>
+    <label for="twitter"> Twitter:</label>
+    <input class="css" type="checkbox" name="twitter" id="twitter"> <br>
+    <label for="message"> Email Message</label>
+    <input class="css" type="checkbox" name="message" id="message"> <br>
+    
+    
+    <h2>Thank you for taking our survey!</h2>
+    <input type="submit" name="button" id="button" value="Submit">
+    <input type="reset" name="reset" id="reset"> 
+</form>
+<!--Survey end-->
+    <footer class="bold">
+    &#169; Derius Knight 2020 <br>
+    Email: Dknigh14@aum.edu
+</footer>
+</body>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">	
+    <title>Home</title>
+    <link rel="stylesheet" href="Project.css">
+    <script src="library_event.js"></script>
+    
+</head>
+<header>
+    <a href="Project.html"><img src="images/AUM-Logo.png" alt="AUM logo" width="100" height="100"/></a>
+    <h1 class="orangeC">Home</h1>
+    
+    <!--Date and Clock Starts here -->
+    <div id="clockbox" style="color: orangered; font-weight: bold; text-align: right";></div>
+
+    <script type="text/javascript">
+    var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    function GetClock(){
+    var d=new Date();
+    var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+    var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+    if(nhour==0){ap=" AM";nhour=12;}
+    else if(nhour<12){ap=" AM";}
+    else if(nhour==12){ap=" PM";}
+    else if(nhour>12){ap=" PM";nhour-=12;}
+
+    if(nmin<=9) nmin="0"+nmin;
+    if(nsec<=9) nsec="0"+nsec;
+
+    var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+    document.getElementById('clockbox').innerHTML=clocktext;
+    }
+
+    GetClock();
+    setInterval(GetClock,1000);
+</script>
+<!--Date and Clock ends-->
+    
+    
+<!--Navbar start-->
+    <nav id="nav_top">
+        <ul>
+            <li><a href="Project.html">Home</a></li>
+            <li><a href="Computer%20Science%20Description.html">Computer Science Program</a></li>
+            <li><a href="Teaching%20Assistant.html">Teaching Assistant Application</a></li>
+            <li><a href="GPA.html">GPA Calculate</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+<!--Navbar ends-->
+</header>
+<body>
+    <h2> Computer Science Degrees and Certificates</h2>
+    <p class="bold">
+        
+        Bachelor<br>
+ 	 	<br>
+        Computer Science<br>
+        <br>
+        Master’s<br>
+ 	 	 
+        Computer Information Systems and Cyber Security	 	 	 
+        Computer Science<br>
+        <br>
+        Minor<br>
+ 	 	 <br>
+        Computer Science Minor
+    </p>
+    <br>
+    
+    <h2>Academic Calendar</h2>
+    
+    <!--Table start-->
+    
+        <table class="orangeT">
+                <tr>
+                    <th>Spring 2021 First Half Term</th>
+                
+                </tr>
+            
+                <tr>
+                    <td>First Day to Apply for Spring Graduation</td>
+                    <td>Friday, October 30, 2020</td>
+                </tr>
+            
+                <tr>
+                    <td>Priority Registration Seniors, UHP, Athletes, Graduate Students</td>
+                    <td>Friday, October 30, 2020</td>
+                </tr>
+            
+                <tr>
+                    <td>Priority Registration Juniors</td>
+                    <td>Monday, November 02, 2020</td>
+                </tr>
+            
+                <tr>
+                    <td>Priority Registration Sophomores & Freshmen</td>
+                    <td>Tuesday, November 03, 2020</td>
+                </tr>
+            
+                <tr>
+                    <td>Priority Registration New Admitted Students</td>
+                    <td>Wednesday, November 04, 2020</td>
+                </tr>
+            
+                <tr>
+                    <td>Preferred Deadline for Receipt of Applications and All Supporting Documentation</td>
+                    <td>Friday, December 18, 2020</td>
+                </tr>
+            
+                <tr>
+                    <td>Last Day to Apply for Spring 2021</td>
+                    <td>Monday, January 04, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Tuition Due Date</td>
+                    <td>Monday, January 04, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Student Housing Move-In</td>
+                    <td>Friday, January 08, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Classes Begin</td>
+                    <td>Monday, January 11, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Last Day for 100% Refund</td>
+                    <td>Tuesday, January 12, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Registration Cancellation</td>
+                    <td>Friday, January 15, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Last Day to Add Classes</td>
+                    <td>Tuesday, January 19, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Holiday, No Class</td>
+                    <td>Monday, January 18, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Holiday, No Class</td>
+                    <td>Tuesday, January 19, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Last Day for 50% Refund</td>
+                    <td>Wednesday, January 20, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Last Day to Apply for Spring Graduation</td>
+                    <td>Friday, January 22, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Mid-Term Grades Due</td>
+                    <td>Wednesday, February 05, 2020</td>
+                </tr>
+            
+                <tr>
+                    <td>Last Day to Drop</td>
+                    <td>Tuesday, February 16, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Weather Make-up Day</td>
+                    <td>Friday, February 26, 2021</td>
+                </tr>
+            
+                <tr>
+                    <td>Classes End<br>Finals held last day of class.</td>
+                    <td>Tuesday, March 02, 2021</td>
+                </tr>
+        </table>
+        
+<!--Table end-->
+
+
+    <footer class="bold">
+    &#169; Derius Knight 2020 <br>
+    Email: Dknigh14@aum.edu
+</footer>
+</body>
+
